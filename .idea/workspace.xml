@@ -4,45 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="536ec917-4765-4710-aa0a-514748687c4d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Generaor/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/bean/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/bean/FieldInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/bean/TableInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/builder/BuildBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/builder/BuildComment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/builder/BuildMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/builder/BuildMapperXml.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/builder/BuildPo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/builder/BuildQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/builder/BuildTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/utils/ConfigFileReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/utils/ConstantsClassGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/utils/DateUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/utils/PropertyUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/utils/StringUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Generaor/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Generaor/src/main/resources/template/BaseMapper.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Generaor/src/main/resources/template/BaseQuery.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Generaor/src/main/resources/template/DateTimePatternEnum.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Generaor/src/main/resources/template/DateUtils.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Generaor/src/main/resources/template/PageSize.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Generaor/src/main/resources/template/SimplePage.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/test/myService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/workspace-mybatisCodeGeneraor.iml" afterDir="false" />
-    </list>
+    <list default="true" id="536ec917-4765-4710-aa0a-514748687c4d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -225,6 +187,7 @@
       <workItem from="1697768383208" duration="81000" />
       <workItem from="1697768473462" duration="25254000" />
       <workItem from="1698028530978" duration="15973000" />
+      <workItem from="1698244193078" duration="745000" />
     </task>
     <servers />
   </component>
