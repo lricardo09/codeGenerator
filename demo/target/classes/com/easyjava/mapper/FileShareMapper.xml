@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ 		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.easyjava.mapper.FileShareMapper">
+	<resultMap id="base_result_map" type="com.easyjava.entity.po.FileShare">
+		<!---->
+		<id column="share_id" property="shareId"/>
+		<!---->
+		<result column="file_id" property="fileId"/>
+		<!---->
+		<result column="user_id" property="userId"/>
+		<!--有效期类型 0:1天 1:7天 2:30天 3:永久有效-->
+		<result column="valid_type" property="validType"/>
+		<!--分享时间-->
+		<result column="share_time" property="shareTime"/>
+		<!--失效时间-->
+		<result column="expire_time" property="expireTime"/>
+		<!--提取码-->
+		<result column="code" property="code"/>
+		<!--浏览次数-->
+		<result column="show_count" property="showCount"/>
+	</resultMap>
+	<sql id="base_column_list">
+		shareId,fileId,userId,validType,shareTime,expireTime,code,showCount
+	</sql>
+	<sql id="base_condition_list">
+		<if test="shareId != null and shareId!=''">
+			and shareId=#{query.shareId}
+		</if>
+		<if test="fileId != null and fileId!=''">
+			and fileId=#{query.fileId}
+		</if>
+		<if test="userId != null and userId!=''">
+			and userId=#{query.userId}
+		</if>
+		<if test="validType != null">
+			and validType=#{query.validType}
+		</if>
+		<if test="shareTime != null">
+			and shareTime=#{query.shareTime}
+		</if>
+		<if test="expireTime != null">
+			and expireTime=#{query.expireTime}
+		</if>
+		<if test="code != null and code!=''">
+			and code=#{query.code}
+		</if>
+		<if test="showCount != null">
+			and showCount=#{query.showCount}
+		</if>
+	</sql>
+	<sql id="query_condition_list">
+		<if test="shareIdFuzzy != null and shareIdFuzzy!=''">
+			and share_id like concat('%', #{query.shareIdFuzzy}, '%')
+		</if>
+		<if test="fileIdFuzzy != null and fileIdFuzzy!=''">
+			and file_id like concat('%', #{query.fileIdFuzzy}, '%')
+		</if>
+		<if test="userIdFuzzy != null and userIdFuzzy!=''">
+			and user_id like concat('%', #{query.userIdFuzzy}, '%')
+		</if>
+		<if test="shareTimeStart != null and shareTimeStart!=''">
+			<![CDATA[ and share_time > str_to_date(#{shareTimeStart}, '%Y-%m-%d')]]>
+		</if>
+		<if test="shareTimeEnd != null and shareTimeEnd!=''">
+			<![CDATA[ and share_time < DATE_SUB( str_to_date(#{shareTimeEnd}, '%Y-%m-%d'), interval 1 DAY)]]>
+		</if>
+		<if test="expireTimeStart != null and expireTimeStart!=''">
+			<![CDATA[ and expire_time > str_to_date(#{expireTimeStart}, '%Y-%m-%d')]]>
+		</if>
+		<if test="expireTimeEnd != null and expireTimeEnd!=''">
+			<![CDATA[ and expire_time < DATE_SUB( str_to_date(#{expireTimeEnd}, '%Y-%m-%d'), interval 1 DAY)]]>
+		</if>
+		<if test="codeFuzzy != null and codeFuzzy!=''">
+			and code like concat('%', #{query.codeFuzzy}, '%')
+		</if>
+	</sql>
+	<sql id="base_condition">
+		<where>
+			<include refid='base_condition_list'/>
+		</where>
+	</sql>
+	<sql id="base_condition_extend">
+		<where>
+			<include refid='base_condition_list'/>
+			<include refid='query_condition_list'/>
+		</where>
+	</sql>
+
+</mapper>

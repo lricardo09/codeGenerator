@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.easyjava.mapper.EmailCodeMapper">
+    <resultMap id="base_result_map" type="com.easyjava.entity.po.EmailCode">
+        <!--邮箱-->
+        <result column="email" property="email"/>
+        <!--验证码-->
+        <result column="code" property="code"/>
+        <!--验证码创建时间-->
+        <result column="create_time" property="createTime"/>
+        <!--状态0：未使用1:已使用-->
+        <result column="status" property="status"/>
+    </resultMap>
+    <sql id="base_column_list">
+        email
+        ,code,createTime,status
+    </sql>
+    <sql id="base_condition_list">
+        <if test="email != null and email!=''">
+            and email=#{query.email}
+        </if>
+        <if test="code != null and code!=''">
+            and code=#{query.code}
+        </if>
+        <if test="createTime != null">
+            and createTime=#{query.createTime}
+        </if>
+        <if test="status != null">
+            and status=#{query.status}
+        </if>
+    </sql>
+    <sql id="query_condition_list">
+        <if test="emailFuzzy != null and emailFuzzy!=''">
+            and email like concat('%', #{query.emailFuzzy}, '%')
+        </if>
+        <if test="codeFuzzy != null and codeFuzzy!=''">
+            and code like concat('%', #{query.codeFuzzy}, '%')
+        </if>
+        <if test="createTimeStart != null and createTimeStart!=''">
+            <![CDATA[ and create_time > str_to_date(#{createTimeStart}, '%Y-%m-%d')]]>
+        </if>
+        <if test="createTimeEnd != null and createTimeEnd!=''">
+            <![CDATA[ and create_time < DATE_SUB( str_to_date(#{createTimeEnd}, '%Y-%m-%d'), interval 1 DAY)]]>
+        </if>
+    </sql>
+    <sql id="base_condition">
+        <where>
+            <include refid='base_condition_list'/>
+        </where>
+    </sql>
+    <sql id="base_condition_extend">
+        <where>
+            <include refid='base_condition_list'/>
+            <include refid='query_condition_list'/>
+        </where>
+    </sql>
+
+</mapper>

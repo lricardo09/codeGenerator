@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ 		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.easyjava.mapper.UserInfoMapper">
+	<resultMap id="base_result_map" type="com.easyjava.entity.po.UserInfo">
+		<!--用户id-->
+		<id column="user_id" property="userId"/>
+		<!--昵称-->
+		<result column="nick_name" property="nickName"/>
+		<!--邮箱-->
+		<result column="email" property="email"/>
+		<!--qq open id-->
+		<result column="qq_open_id" property="qqOpenId"/>
+		<!--qq头像-->
+		<result column="qq_avatar" property="qqAvatar"/>
+		<!--密码-->
+		<result column="password" property="password"/>
+		<!--注册时间-->
+		<result column="join_time" property="joinTime"/>
+		<!--上次登录时间-->
+		<result column="last_login_time" property="lastLoginTime"/>
+		<!--1:启用 0：禁用-->
+		<result column="status" property="status"/>
+		<!--可用空间-->
+		<result column="use_space" property="useSpace"/>
+		<!--总空间-->
+		<result column="total_space" property="totalSpace"/>
+		<!--联合主键1-->
+		<result column="t1" property="t1"/>
+		<!--联合主键2-->
+		<result column="t2" property="t2"/>
+		<!--日期类字段,不带时分秒-->
+		<result column="join_date_test" property="joinDateTest"/>
+		<!--钱-->
+		<result column="money" property="money"/>
+	</resultMap>
+	<sql id="base_column_list">
+		userId,nickName,email,qqOpenId,qqAvatar,password,joinTime,lastLoginTime,status,useSpace,totalSpace,t1,t2,joinDateTest,money
+	</sql>
+	<sql id="base_condition_list">
+		<if test="userId != null and userId!=''">
+			and userId=#{query.userId}
+		</if>
+		<if test="nickName != null and nickName!=''">
+			and nickName=#{query.nickName}
+		</if>
+		<if test="email != null and email!=''">
+			and email=#{query.email}
+		</if>
+		<if test="qqOpenId != null and qqOpenId!=''">
+			and qqOpenId=#{query.qqOpenId}
+		</if>
+		<if test="qqAvatar != null and qqAvatar!=''">
+			and qqAvatar=#{query.qqAvatar}
+		</if>
+		<if test="password != null and password!=''">
+			and password=#{query.password}
+		</if>
+		<if test="joinTime != null">
+			and joinTime=#{query.joinTime}
+		</if>
+		<if test="lastLoginTime != null">
+			and lastLoginTime=#{query.lastLoginTime}
+		</if>
+		<if test="status != null">
+			and status=#{query.status}
+		</if>
+		<if test="useSpace != null">
+			and useSpace=#{query.useSpace}
+		</if>
+		<if test="totalSpace != null">
+			and totalSpace=#{query.totalSpace}
+		</if>
+		<if test="t1 != null">
+			and t1=#{query.t1}
+		</if>
+		<if test="t2 != null">
+			and t2=#{query.t2}
+		</if>
+		<if test="joinDateTest != null">
+			and joinDateTest=#{query.joinDateTest}
+		</if>
+		<if test="money != null">
+			and money=#{query.money}
+		</if>
+	</sql>
+	<sql id="query_condition_list">
+		<if test="userIdFuzzy != null and userIdFuzzy!=''">
+			and user_id like concat('%', #{query.userIdFuzzy}, '%')
+		</if>
+		<if test="nickNameFuzzy != null and nickNameFuzzy!=''">
+			and nick_name like concat('%', #{query.nickNameFuzzy}, '%')
+		</if>
+		<if test="emailFuzzy != null and emailFuzzy!=''">
+			and email like concat('%', #{query.emailFuzzy}, '%')
+		</if>
+		<if test="qqOpenIdFuzzy != null and qqOpenIdFuzzy!=''">
+			and qq_open_id like concat('%', #{query.qqOpenIdFuzzy}, '%')
+		</if>
+		<if test="qqAvatarFuzzy != null and qqAvatarFuzzy!=''">
+			and qq_avatar like concat('%', #{query.qqAvatarFuzzy}, '%')
+		</if>
+		<if test="passwordFuzzy != null and passwordFuzzy!=''">
+			and password like concat('%', #{query.passwordFuzzy}, '%')
+		</if>
+		<if test="joinTimeStart != null and joinTimeStart!=''">
+			<![CDATA[ and join_time > str_to_date(#{joinTimeStart}, '%Y-%m-%d')]]>
+		</if>
+		<if test="joinTimeEnd != null and joinTimeEnd!=''">
+			<![CDATA[ and join_time < DATE_SUB( str_to_date(#{joinTimeEnd}, '%Y-%m-%d'), interval 1 DAY)]]>
+		</if>
+		<if test="lastLoginTimeStart != null and lastLoginTimeStart!=''">
+			<![CDATA[ and last_login_time > str_to_date(#{lastLoginTimeStart}, '%Y-%m-%d')]]>
+		</if>
+		<if test="lastLoginTimeEnd != null and lastLoginTimeEnd!=''">
+			<![CDATA[ and last_login_time < DATE_SUB( str_to_date(#{lastLoginTimeEnd}, '%Y-%m-%d'), interval 1 DAY)]]>
+		</if>
+		<if test="joinDateTestStart != null and joinDateTestStart!=''">
+			<![CDATA[ and join_date_test > str_to_date(#{joinDateTestStart}, '%Y-%m-%d')]]>
+		</if>
+		<if test="joinDateTestEnd != null and joinDateTestEnd!=''">
+			<![CDATA[ and join_date_test < DATE_SUB( str_to_date(#{joinDateTestEnd}, '%Y-%m-%d'), interval 1 DAY)]]>
+		</if>
+	</sql>
+	<sql id="base_condition">
+		<where>
+			<include refid='base_condition_list'/>
+		</where>
+	</sql>
+	<sql id="base_condition_extend">
+		<where>
+			<include refid='base_condition_list'/>
+			<include refid='query_condition_list'/>
+		</where>
+	</sql>
+
+	<select id='selectList' resultMap='base_result_map'>
+		SELECT
+		<include refid='base_column_list'/>
+		FROM user_info
+		<include refid='base_condition_extend'/>
+		ORDER BY ${query.orderBy}
+		LIMIT #{query.simplePage.start}, #{query.simplePage.end}
+	</select>
+</mapper>

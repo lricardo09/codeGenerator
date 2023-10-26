@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ 		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.easyjava.mapper.TestTbMapper">
+	<resultMap id="base_result_map" type="com.easyjava.entity.po.TestTb">
+		<!---->
+		<id column="user_id" property="userId"/>
+		<!---->
+		<result column="column2" property="column2"/>
+	</resultMap>
+	<sql id="base_column_list">
+		userId,column2
+	</sql>
+	<sql id="base_condition_list">
+		<if test="userId != null">
+			and userId=#{query.userId}
+		</if>
+		<if test="column2 != null">
+			and column2=#{query.column2}
+		</if>
+	</sql>
+	<sql id="query_condition_list">
+	</sql>
+	<sql id="base_condition">
+		<where>
+			<include refid='base_condition_list'/>
+		</where>
+	</sql>
+	<sql id="base_condition_extend">
+		<where>
+			<include refid='base_condition_list'/>
+			<include refid='query_condition_list'/>
+		</where>
+	</sql>
+
+	<select id='selectList' resultMap='base_result_map'>
+		SELECT
+		<include refid='base_column_list'/>
+		FROM test_tb
+		<include refid='base_condition_extend'/>
+		ORDER BY ${query.orderBy}
+		LIMIT #{query.simplePage.start}, #{query.simplePage.end}
+	</select>
+</mapper>

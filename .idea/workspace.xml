@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="536ec917-4765-4710-aa0a-514748687c4d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Generaor/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/bean/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/bean/FieldInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/bean/TableInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/builder/BuildBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/builder/BuildComment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/builder/BuildMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/builder/BuildMapperXml.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/builder/BuildPo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/builder/BuildQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/builder/BuildTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/utils/ConfigFileReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/utils/ConstantsClassGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/utils/DateUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/utils/PropertyUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/utils/StringUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Generaor/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Generaor/src/main/resources/template/BaseMapper.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Generaor/src/main/resources/template/BaseQuery.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Generaor/src/main/resources/template/DateTimePatternEnum.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Generaor/src/main/resources/template/DateUtils.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Generaor/src/main/resources/template/PageSize.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Generaor/src/main/resources/template/SimplePage.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/test/myService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/workspace-mybatisCodeGeneraor.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HierarchyBrowserManager">
+    <option name="SORT_ALPHABETICALLY" value="true" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://C:/jdk1.8.0_31/src.zip!/java/io/BufferedWriter.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://C:/jdk1.8.0_31/src.zip!/java/io/FileOutputStream.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://C:/jdk1.8.0_31/src.zip!/java/io/OutputStreamWriter.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\maven-cangku" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../浏览器下载/apache-maven-3.9.4" />
+        <option name="userSettingsFile" value="D:\浏览器下载\apache-maven-3.9.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2WC4cfjdwRfr5OmC8LJJjDRMoSO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/PROJECT/workspace-mybatisCodeGeneraor/Generaor/src/main/resources&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;fe01ce2a7fbac8fafaed7c982a04e229&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.easyjava.entity.po" />
+      <recent name="com.easyjava.builder" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PROJECT\workspace-mybatisCodeGeneraor\Generaor\src\main\resources\template" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.easyjava.builder" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Application">
+    <configuration name="A" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.easyjava.mapper.A" />
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.easyjava.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.easyjava.Application" />
+      <module name="Generaor" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.easyjava.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Constants" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.easyjava.bean.Constants" />
+      <module name="Generaor" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.easyjava.bean.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConstantsClassGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.easyjava.utils.ConstantsClassGenerator" />
+      <module name="Generaor" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.easyjava.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmailCodeQuery" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.easyjava.entity.query.EmailCodeQuery" />
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.easyjava.entity.query.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Application" />
+        <item itemvalue="Application.EmailCodeQuery" />
+        <item itemvalue="Application.A" />
+        <item itemvalue="Application.Constants" />
+        <item itemvalue="Application.ConstantsClassGenerator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="536ec917-4765-4710-aa0a-514748687c4d" name="Changes" comment="" />
+      <created>1696223311176</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1696223311176</updated>
+      <workItem from="1696223312914" duration="2289000" />
+      <workItem from="1696225890010" duration="629000" />
+      <workItem from="1696226529247" duration="992000" />
+      <workItem from="1696228196201" duration="927000" />
+      <workItem from="1696231535944" duration="1476000" />
+      <workItem from="1696402339054" duration="40685000" />
+      <workItem from="1696766270591" duration="4159000" />
+      <workItem from="1696918518975" duration="6892000" />
+      <workItem from="1697097008625" duration="8446000" />
+      <workItem from="1697169039274" duration="15404000" />
+      <workItem from="1697511627037" duration="20220000" />
+      <workItem from="1697768383208" duration="81000" />
+      <workItem from="1697768473462" duration="25254000" />
+      <workItem from="1698028530978" duration="15973000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/builder/BuildBase.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="ls[1]" />
+        <watch expression="sb.lastIndexOf(&quot;,&quot;)" />
+        <watch expression="iterator.next()" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/workspace_mybatisCodeGeneraor$BuildQuery.ic" NAME="BuildQuery Coverage Results" MODIFIED="1697511705676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.easyjava.builder.*</FILTER>
+    </SUITE>
+  </component>
+</project>
