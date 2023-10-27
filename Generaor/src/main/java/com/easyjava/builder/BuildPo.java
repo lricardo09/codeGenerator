@@ -117,7 +117,7 @@ public class BuildPo {
                 bw.newLine();
                 bw.newLine();
             }
-            bw.write("}");
+            bw.write("}//哈哈哈开心");
             bw.flush();
         } catch (Exception e) {
             logger.error("生成po类失败,可能的错误:配置文件中的文件路径错误" + e);

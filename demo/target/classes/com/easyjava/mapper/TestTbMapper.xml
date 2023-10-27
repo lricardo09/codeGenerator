@@ -33,4 +33,12 @@
 		</where>
 	</sql>
 
+	<select id='selectList' resultMap='base_result_map'>
+		SELECT
+		<include refid='base_column_list'/>
+		FROM test_tb
+		<include refid='base_condition_extend'/>
+		ORDER BY ${query.orderBy}
+		LIMIT #{query.simplePage.start}, #{query.simplePage.end}
+	</select>
 </mapper>

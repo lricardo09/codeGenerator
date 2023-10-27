@@ -22,124 +22,135 @@
 		<!--1:启用 0：禁用-->
 		<result column="status" property="status"/>
 		<!--可用空间-->
-		<result column="use_space" property="useSpace"/>
+		<result column="used_space" property="usedSpace"/>
 		<!--总空间-->
 		<result column="total_space" property="totalSpace"/>
-		<!--联合主键1-->
-		<result column="t1" property="t1"/>
-		<!--联合主键2-->
-		<result column="t2" property="t2"/>
-		<!--日期类字段,不带时分秒-->
-		<result column="join_date_test" property="joinDateTest"/>
-		<!--钱-->
-		<result column="money" property="money"/>
 	</resultMap>
 	<sql id="base_column_list">
-		userId,nickName,email,qqOpenId,qqAvatar,password,joinTime,lastLoginTime,status,useSpace,totalSpace,t1,t2,joinDateTest,money
+		user_id,nick_name,email,qq_open_id,qq_avatar,password,join_time,last_login_time,status,used_space,total_space
 	</sql>
 	<sql id="base_condition_list">
-		<if test="userId != null and userId!=''">
-			and userId=#{query.userId}
+		<if test="query.userId != null and userId!=''">
+			and query.user_id=#{query.userId}
 		</if>
-		<if test="nickName != null and nickName!=''">
-			and nickName=#{query.nickName}
+		<if test="query.nickName != null and nickName!=''">
+			and query.nick_name=#{query.nickName}
 		</if>
-		<if test="email != null and email!=''">
-			and email=#{query.email}
+		<if test="query.email != null and email!=''">
+			and query.email=#{query.email}
 		</if>
-		<if test="qqOpenId != null and qqOpenId!=''">
-			and qqOpenId=#{query.qqOpenId}
+		<if test="query.qqOpenId != null and qqOpenId!=''">
+			and query.qq_open_id=#{query.qqOpenId}
 		</if>
-		<if test="qqAvatar != null and qqAvatar!=''">
-			and qqAvatar=#{query.qqAvatar}
+		<if test="query.qqAvatar != null and qqAvatar!=''">
+			and query.qq_avatar=#{query.qqAvatar}
 		</if>
-		<if test="password != null and password!=''">
-			and password=#{query.password}
+		<if test="query.password != null and password!=''">
+			and query.password=#{query.password}
 		</if>
-		<if test="joinTime != null">
-			and joinTime=#{query.joinTime}
+		<if test="query.joinTime != null">
+			and join_time=#{query.joinTime}
 		</if>
-		<if test="lastLoginTime != null">
-			and lastLoginTime=#{query.lastLoginTime}
+		<if test="query.lastLoginTime != null">
+			and last_login_time=#{query.lastLoginTime}
 		</if>
-		<if test="status != null">
+		<if test="query.status != null">
 			and status=#{query.status}
 		</if>
-		<if test="useSpace != null">
-			and useSpace=#{query.useSpace}
+		<if test="query.usedSpace != null">
+			and used_space=#{query.usedSpace}
 		</if>
-		<if test="totalSpace != null">
-			and totalSpace=#{query.totalSpace}
-		</if>
-		<if test="t1 != null">
-			and t1=#{query.t1}
-		</if>
-		<if test="t2 != null">
-			and t2=#{query.t2}
-		</if>
-		<if test="joinDateTest != null">
-			and joinDateTest=#{query.joinDateTest}
-		</if>
-		<if test="money != null">
-			and money=#{query.money}
+		<if test="query.totalSpace != null">
+			and total_space=#{query.totalSpace}
 		</if>
 	</sql>
 	<sql id="query_condition_list">
-		<if test="userIdFuzzy != null and userIdFuzzy!=''">
+		<if test="query.userIdFuzzy != null and query.userIdFuzzy!=''">
 			and user_id like concat('%', #{query.userIdFuzzy}, '%')
 		</if>
-		<if test="nickNameFuzzy != null and nickNameFuzzy!=''">
+		<if test="query.nickNameFuzzy != null and query.nickNameFuzzy!=''">
 			and nick_name like concat('%', #{query.nickNameFuzzy}, '%')
 		</if>
-		<if test="emailFuzzy != null and emailFuzzy!=''">
+		<if test="query.emailFuzzy != null and query.emailFuzzy!=''">
 			and email like concat('%', #{query.emailFuzzy}, '%')
 		</if>
-		<if test="qqOpenIdFuzzy != null and qqOpenIdFuzzy!=''">
+		<if test="query.qqOpenIdFuzzy != null and query.qqOpenIdFuzzy!=''">
 			and qq_open_id like concat('%', #{query.qqOpenIdFuzzy}, '%')
 		</if>
-		<if test="qqAvatarFuzzy != null and qqAvatarFuzzy!=''">
+		<if test="query.qqAvatarFuzzy != null and query.qqAvatarFuzzy!=''">
 			and qq_avatar like concat('%', #{query.qqAvatarFuzzy}, '%')
 		</if>
-		<if test="passwordFuzzy != null and passwordFuzzy!=''">
+		<if test="query.passwordFuzzy != null and query.passwordFuzzy!=''">
 			and password like concat('%', #{query.passwordFuzzy}, '%')
 		</if>
-		<if test="joinTimeStart != null and joinTimeStart!=''">
-			<![CDATA[ and join_time > str_to_date(#{joinTimeStart}, '%Y-%m-%d')]]>
+		<if test="query.joinTimeStart != null and query.joinTimeStart!=''">
+			<![CDATA[ and join_time > str_to_date(#{query.joinTimeStart}, '%Y-%m-%d %H:%m:%s')]]>
 		</if>
-		<if test="joinTimeEnd != null and joinTimeEnd!=''">
-			<![CDATA[ and join_time < DATE_SUB( str_to_date(#{joinTimeEnd}, '%Y-%m-%d'), interval 1 DAY)]]>
+		<if test="query.joinTimeEnd != null and query.joinTimeEnd!=''">
+			<![CDATA[ and join_time < DATE_SUB( str_to_date(#{query.joinTimeEnd}, '%Y-%m-%d %H:%m:%s'), interval -1 DAY)]]>
 		</if>
-		<if test="lastLoginTimeStart != null and lastLoginTimeStart!=''">
-			<![CDATA[ and last_login_time > str_to_date(#{lastLoginTimeStart}, '%Y-%m-%d')]]>
+		<if test="query.lastLoginTimeStart != null and query.lastLoginTimeStart!=''">
+			<![CDATA[ and last_login_time > str_to_date(#{query.lastLoginTimeStart}, '%Y-%m-%d %H:%m:%s')]]>
 		</if>
-		<if test="lastLoginTimeEnd != null and lastLoginTimeEnd!=''">
-			<![CDATA[ and last_login_time < DATE_SUB( str_to_date(#{lastLoginTimeEnd}, '%Y-%m-%d'), interval 1 DAY)]]>
-		</if>
-		<if test="joinDateTestStart != null and joinDateTestStart!=''">
-			<![CDATA[ and join_date_test > str_to_date(#{joinDateTestStart}, '%Y-%m-%d')]]>
-		</if>
-		<if test="joinDateTestEnd != null and joinDateTestEnd!=''">
-			<![CDATA[ and join_date_test < DATE_SUB( str_to_date(#{joinDateTestEnd}, '%Y-%m-%d'), interval 1 DAY)]]>
+		<if test="query.lastLoginTimeEnd != null and query.lastLoginTimeEnd!=''">
+			<![CDATA[ and last_login_time < DATE_SUB( str_to_date(#{query.lastLoginTimeEnd}, '%Y-%m-%d %H:%m:%s'), interval -1 DAY)]]>
 		</if>
 	</sql>
 	<sql id="base_condition">
 		<where>
-			<include refid='base_condition_list'/>
+			<include refid="base_condition_list"/>
 		</where>
 	</sql>
 	<sql id="base_condition_extend">
 		<where>
-			<include refid='base_condition_list'/>
-			<include refid='query_condition_list'/>
+			<include refid="base_condition_list"/>
+			<include refid="query_condition_list"/>
 		</where>
 	</sql>
 
-	<select id='selectList' resultMap='base_result_map'>
+	<select id="selectList" resultMap="base_result_map">
 		SELECT
-		<include refid='base_column_list'/>
+		<include refid="base_column_list"/>
 		FROM user_info
 		<include refid='base_condition_extend'/>
-		ORDER BY ${query.orderBy}
-		LIMIT #{query.simplePage.start}, #{query.simplePage.end}
+		<if test="query.orderBy!=null and query.orderBy!=''">
+			ORDER BY ${query.orderBy}</if>
+		limit ${query.simplePage.start},${query.simplePage.end}
 	</select>
+	<select id="selectCount" resultType="java.lang.Integer" >
+		SELECT
+		COUNT(1)
+		FROM user_info
+		<include refid="base_condition_extend"/>
+	</select>
+	<insert id="insert" parameterType="com.easyjava.entity.po.UserInfo">
+		INSERT INTO user_info
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="bean.userId!=null">user_id,</if>
+			<if test="bean.nickName!=null">nick_name,</if>
+			<if test="bean.email!=null">email,</if>
+			<if test="bean.qqOpenId!=null">qq_open_id,</if>
+			<if test="bean.qqAvatar!=null">qq_avatar,</if>
+			<if test="bean.password!=null">password,</if>
+			<if test="bean.joinTime!=null">join_time,</if>
+			<if test="bean.lastLoginTime!=null">last_login_time,</if>
+			<if test="bean.status!=null">status,</if>
+			<if test="bean.usedSpace!=null">used_space,</if>
+			<if test="bean.totalSpace!=null">total_space,</if>
+		</trim>
+		VALUES
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="bean.userId!=null">#{bean.userId},</if>
+			<if test="bean.nickName!=null">#{bean.nickName},</if>
+			<if test="bean.email!=null">#{bean.email},</if>
+			<if test="bean.qqOpenId!=null">#{bean.qqOpenId},</if>
+			<if test="bean.qqAvatar!=null">#{bean.qqAvatar},</if>
+			<if test="bean.password!=null">#{bean.password},</if>
+			<if test="bean.joinTime!=null">#{bean.joinTime},</if>
+			<if test="bean.lastLoginTime!=null">#{bean.lastLoginTime},</if>
+			<if test="bean.status!=null">#{bean.status},</if>
+			<if test="bean.usedSpace!=null">#{bean.usedSpace},</if>
+			<if test="bean.totalSpace!=null">#{bean.totalSpace},</if>
+		</trim>
+	</insert>
 </mapper>

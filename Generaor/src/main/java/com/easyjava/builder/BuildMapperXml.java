@@ -62,7 +62,7 @@ public class BuildMapperXml {
             StringBuffer sb = new StringBuffer();
             bw.write("\t<sql id=\"base_column_list\">\n\t\t");
             for (FieldInfo field : table.getFieldList()) {
-                sb.append(field.getPropertyName() + ",");
+                sb.append(field.getFieldName() + ",");
             }
             String s = sb.substring(0, sb.lastIndexOf(","));
             bw.write(s);
@@ -75,12 +75,12 @@ public class BuildMapperXml {
                 FieldInfo field = iterator.next();
                 boolean hasStr = ArrayUtils.contains(Constants.SQL_STRING_TYPE, field.getSqlType());
                 if (hasStr) {
-                    bw.write("\t\t<if test=\"" + field.getPropertyName() + " != null and " + field.getPropertyName() + "!=''\">" +
-                            "\n\t\t\tand " + field.getPropertyName() +
+                    bw.write("\t\t<if test=\"query." + field.getPropertyName() + " != null and " + field.getPropertyName() + "!=''\">" +
+                            "\n\t\t\tand query." + field.getFieldName() +
                             "=#{query." + field.getPropertyName() + "}\n\t\t</if>\n");
                 } else {
-                    bw.write("\t\t<if test=\"" + field.getPropertyName() + " != null\">" +
-                            "\n\t\t\tand " + field.getPropertyName() +
+                    bw.write("\t\t<if test=\"query." + field.getPropertyName() + " != null\">" +
+                            "\n\t\t\tand " + field.getFieldName() +
                             "=#{query." + field.getPropertyName() + "}\n\t\t</if>\n");
                 }
             }
@@ -92,20 +92,32 @@ public class BuildMapperXml {
                 FieldInfo field = extendFIterator.next();
                 if (ArrayUtils.contains(Constants.SQL_STRING_TYPE, field.getSqlType())) {
                     if (field.getPropertyName().endsWith(Constants.BEAN_QUERY_NAME_PROPERTYNAME_STRQUERY_FUZZY)) {
-                        bw.write("\t\t<if test=\"" + field.getPropertyName() + " != null and " + field.getPropertyName() + "!=''\">" +
+                        bw.write("\t\t<if test=\"query." + field.getPropertyName() + " != null and query." + field.getPropertyName() + "!=''\">" +
                                 "\n\t\t\tand " + field.getFieldName() + " like concat('%', #{query." + field.getPropertyName() + "}" + ", '%')" +
                                 "\n\t\t</if>\n");
                     }
                 }
-                if (ArrayUtils.contains(Constants.SQL_DATE_TYPE, field.getSqlType()) || ArrayUtils.contains(Constants.SQL_DATE_TIME_TYPE, field.getSqlType())) {
+                if (ArrayUtils.contains(Constants.SQL_DATE_TYPE, field.getSqlType())) {
                     if (field.getPropertyName().endsWith(Constants.BEAN_QUERY_NAME_PROPERTYNAME_DATEQUERY_START)) {
-                        bw.write("\t\t<if test=\"" + field.getPropertyName() + " != null and " + field.getPropertyName() + "!=''\">" +
-                                "\n\t\t\t<![CDATA[ and " + field.getFieldName() + " > str_to_date(#{" + field.getPropertyName() + "}, '%Y-%m-%d')" +
+                        bw.write("\t\t<if test=\"query." + field.getPropertyName() + " != null and query." + field.getPropertyName() + "!=''\">" +
+                                "\n\t\t\t<![CDATA[ and " + field.getFieldName() + " > str_to_date(#{query." + field.getPropertyName() + "}, '%Y-%m-%d')" +
                                 "]]>\n\t\t</if>\n");//<![CDATA[ ]]>
                     }
                     else if (field.getPropertyName().endsWith(Constants.BEAN_QUERY_NAME_PROPERTYNAME_DATEQUERY_END)) {
-                        bw.write("\t\t<if test=\"" + field.getPropertyName() + " != null and " + field.getPropertyName() + "!=''\">" +
-                                "\n\t\t\t<![CDATA[ and " + field.getFieldName() + " < DATE_SUB( str_to_date(#{" + field.getPropertyName() + "}, '%Y-%m-%d'), interval 1 DAY)" +
+                        bw.write("\t\t<if test=\"query." + field.getPropertyName() + " != null and query." + field.getPropertyName() + "!=''\">" +
+                                "\n\t\t\t<![CDATA[ and " + field.getFieldName() + " < DATE_SUB( str_to_date(#{query." + field.getPropertyName() + "}, '%Y-%m-%d'), interval -1 DAY)" +
+                                "]]>\n\t\t</if>\n");//<![CDATA[ ]]>
+                    }
+                }
+                if (ArrayUtils.contains(Constants.SQL_DATE_TIME_TYPE, field.getSqlType())){
+                    if (field.getPropertyName().endsWith(Constants.BEAN_QUERY_NAME_PROPERTYNAME_DATEQUERY_START)) {
+                        bw.write("\t\t<if test=\"query." + field.getPropertyName() + " != null and query." + field.getPropertyName() + "!=''\">" +
+                                "\n\t\t\t<![CDATA[ and " + field.getFieldName() + " > str_to_date(#{query." + field.getPropertyName() + "}, '%Y-%m-%d %H:%m:%s')" +
+                                "]]>\n\t\t</if>\n");//<![CDATA[ ]]>
+                    }
+                    else if (field.getPropertyName().endsWith(Constants.BEAN_QUERY_NAME_PROPERTYNAME_DATEQUERY_END)) {
+                        bw.write("\t\t<if test=\"query." + field.getPropertyName() + " != null and query." + field.getPropertyName() + "!=''\">" +
+                                "\n\t\t\t<![CDATA[ and " + field.getFieldName() + " < DATE_SUB( str_to_date(#{query." + field.getPropertyName() + "}, '%Y-%m-%d %H:%m:%s'), interval -1 DAY)" +
                                 "]]>\n\t\t</if>\n");//<![CDATA[ ]]>
                     }
                 }
@@ -114,26 +126,63 @@ public class BuildMapperXml {
             //base_condition
             bw.write("\t<sql id=\"base_condition\">\n");
             bw.write("\t\t<where>\n");
-            bw.write("\t\t\t<include refid='base_condition_list'/>\n");
+            bw.write("\t\t\t<include refid=\"base_condition_list\"/>\n");
             bw.write("\t\t</where>\n");
             bw.write("\t</sql>\n");
             //base_condition_extend
             bw.write("\t<sql id=\"base_condition_extend\">\n");
             bw.write("\t\t<where>\n");
-            bw.write("\t\t\t<include refid='base_condition_list'/>\n");
-            bw.write("\t\t\t<include refid='query_condition_list'/>\n");
+            bw.write("\t\t\t<include refid=\"base_condition_list\"/>\n");
+            bw.write("\t\t\t<include refid=\"query_condition_list\"/>\n");
             bw.write("\t\t</where>\n");
             bw.write("\t</sql>\n");
             bw.newLine();
             //selectList
-            bw.write("\t<select id='selectList' resultMap='base_result_map'>\n");
+            bw.write("\t<select id=\"selectList\" resultMap=\"base_result_map\">\n");
             bw.write("\t\tSELECT\n" +
-                    "\t\t<include refid='base_column_list'/>\n" +
+                    "\t\t<include refid=\"base_column_list\"/>\n" +
                     "\t\tFROM "+table.getTableName()+"\n" +
                     "\t\t<include refid='base_condition_extend'/>\n" +
-                    "\t\tORDER BY ${query.orderBy}\n" +
-                    "\t\tLIMIT #{query.simplePage.start}, #{query.simplePage.end}\n");
+                    "\t\t<if test=\"query.orderBy!=null and query.orderBy!=''\">\n\t\t\tORDER BY ${query.orderBy}</if>\n" +
+                    "\t\tlimit ${query.simplePage.start},${query.simplePage.end}\n");
             bw.write("\t</select>\n");
+            //select count
+            bw.write("\t<select id=\"selectCount\" resultType=\"java.lang.Integer\" >\n");
+            bw.write("\t\tSELECT\n" +
+                    "\t\tCOUNT(1)\n" +
+                    "\t\tFROM "+table.getTableName()+"\n" +
+                    "\t\t<include refid=\"base_condition_extend\"/>\n");
+            bw.write("\t</select>\n");
+            //insert
+            bw.write("\t<insert id=\"insert\" parameterType=\""+Constants.PACKAGE_PO+"."+ table.getBeanName()+"\">\n");
+            bw.write("\t\tINSERT INTO "+table.getTableName()+"\n");
+            bw.write("\t\t<trim prefix=\"(\" suffix=\")\" suffixOverrides=\",\">\n");
+            for(FieldInfo field: table.getFieldList()){
+                bw.write("\t\t\t<if test=\"bean."+field.getPropertyName()+"!=null\">" +
+                        field.getFieldName()+",</if>\n");
+            }
+            bw.write("\t\t</trim>\n");
+            bw.write("\t\tVALUES\n");
+            bw.write("\t\t<trim prefix=\"(\" suffix=\")\" suffixOverrides=\",\">\n");
+            StringBuffer str=new StringBuffer();
+            for(FieldInfo field: table.getFieldList()){
+                str.append("\t\t\t<if test=\"bean."+field.getPropertyName()+"!=null\">" +
+                        "#{bean."+field.getPropertyName()+"},</if>\n");
+            }
+            bw.write(str.toString());
+            bw.write("\t\t</trim>\n");
+            FieldInfo autoIncrementField = null;
+            for (FieldInfo field: table.getFieldList()){
+                if (field.getAutoIncrement()){
+                    autoIncrementField = field;
+                    break;
+                }
+            }
+            if (autoIncrementField!=null){
+                bw.write("\t\t<selectKey keyProperty=\"bean."+autoIncrementField.getPropertyName()+"\" order=\"AFTER\" resultType=\"java.lang.Integer\">\n" +
+                        "\t\tSELECT LAST_INSERT_ID()\n\t\t</selectKey>\n" );
+            }
+            bw.write("\t</insert>\n");
             bw.write("</mapper>");
             bw.flush();
 

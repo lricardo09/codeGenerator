@@ -24,7 +24,7 @@
 		<!--最后更新时间-->
 		<result column="last_update_time" property="lastUpdateTime"/>
 		<!--目录标志位0:文件；1：目录-->
-		<result column="folder_type" property="folderType"/>
+		<result column="folder_flag" property="folderFlag"/>
 		<!--文件大致分类1：视频 2：音频 3：图片 4：文档 5：其他-->
 		<result column="file_category" property="fileCategory"/>
 		<!--文件细致分类1：视频 2：音频 3：图片 4：pdf 5:doc 6:excel 7:txt 8:code 9:zip 10:其他-->
@@ -35,119 +35,166 @@
 		<result column="recovery_time" property="recoveryTime"/>
 		<!--删除标志位1：回收站 2：正常-->
 		<result column="del_flag" property="delFlag"/>
-		<!--文件后缀名-->
-		<result column="file_suffix" property="fileSuffix"/>
 	</resultMap>
 	<sql id="base_column_list">
-		fileId,userId,fileMd5,filePid,fileSize,fileName,fileCover,filePath,createTime,lastUpdateTime,folderType,fileCategory,fileType,status,recoveryTime,delFlag,fileSuffix
+		file_id,user_id,file_md5,file_pid,file_size,file_name,file_cover,file_path,create_time,last_update_time,folder_flag,file_category,file_type,status,recovery_time,del_flag
 	</sql>
 	<sql id="base_condition_list">
-		<if test="fileId != null and fileId!=''">
-			and fileId=#{query.fileId}
+		<if test="query.fileId != null and fileId!=''">
+			and query.file_id=#{query.fileId}
 		</if>
-		<if test="userId != null and userId!=''">
-			and userId=#{query.userId}
+		<if test="query.userId != null and userId!=''">
+			and query.user_id=#{query.userId}
 		</if>
-		<if test="fileMd5 != null and fileMd5!=''">
-			and fileMd5=#{query.fileMd5}
+		<if test="query.fileMd5 != null and fileMd5!=''">
+			and query.file_md5=#{query.fileMd5}
 		</if>
-		<if test="filePid != null and filePid!=''">
-			and filePid=#{query.filePid}
+		<if test="query.filePid != null and filePid!=''">
+			and query.file_pid=#{query.filePid}
 		</if>
-		<if test="fileSize != null">
-			and fileSize=#{query.fileSize}
+		<if test="query.fileSize != null">
+			and file_size=#{query.fileSize}
 		</if>
-		<if test="fileName != null and fileName!=''">
-			and fileName=#{query.fileName}
+		<if test="query.fileName != null and fileName!=''">
+			and query.file_name=#{query.fileName}
 		</if>
-		<if test="fileCover != null and fileCover!=''">
-			and fileCover=#{query.fileCover}
+		<if test="query.fileCover != null and fileCover!=''">
+			and query.file_cover=#{query.fileCover}
 		</if>
-		<if test="filePath != null and filePath!=''">
-			and filePath=#{query.filePath}
+		<if test="query.filePath != null and filePath!=''">
+			and query.file_path=#{query.filePath}
 		</if>
-		<if test="createTime != null">
-			and createTime=#{query.createTime}
+		<if test="query.createTime != null">
+			and create_time=#{query.createTime}
 		</if>
-		<if test="lastUpdateTime != null">
-			and lastUpdateTime=#{query.lastUpdateTime}
+		<if test="query.lastUpdateTime != null">
+			and last_update_time=#{query.lastUpdateTime}
 		</if>
-		<if test="folderType != null">
-			and folderType=#{query.folderType}
+		<if test="query.folderFlag != null">
+			and folder_flag=#{query.folderFlag}
 		</if>
-		<if test="fileCategory != null">
-			and fileCategory=#{query.fileCategory}
+		<if test="query.fileCategory != null">
+			and file_category=#{query.fileCategory}
 		</if>
-		<if test="fileType != null">
-			and fileType=#{query.fileType}
+		<if test="query.fileType != null">
+			and file_type=#{query.fileType}
 		</if>
-		<if test="status != null">
+		<if test="query.status != null">
 			and status=#{query.status}
 		</if>
-		<if test="recoveryTime != null">
-			and recoveryTime=#{query.recoveryTime}
+		<if test="query.recoveryTime != null">
+			and recovery_time=#{query.recoveryTime}
 		</if>
-		<if test="delFlag != null">
-			and delFlag=#{query.delFlag}
-		</if>
-		<if test="fileSuffix != null and fileSuffix!=''">
-			and fileSuffix=#{query.fileSuffix}
+		<if test="query.delFlag != null">
+			and del_flag=#{query.delFlag}
 		</if>
 	</sql>
 	<sql id="query_condition_list">
-		<if test="fileIdFuzzy != null and fileIdFuzzy!=''">
+		<if test="query.fileIdFuzzy != null and query.fileIdFuzzy!=''">
 			and file_id like concat('%', #{query.fileIdFuzzy}, '%')
 		</if>
-		<if test="userIdFuzzy != null and userIdFuzzy!=''">
+		<if test="query.userIdFuzzy != null and query.userIdFuzzy!=''">
 			and user_id like concat('%', #{query.userIdFuzzy}, '%')
 		</if>
-		<if test="fileMd5Fuzzy != null and fileMd5Fuzzy!=''">
+		<if test="query.fileMd5Fuzzy != null and query.fileMd5Fuzzy!=''">
 			and file_md5 like concat('%', #{query.fileMd5Fuzzy}, '%')
 		</if>
-		<if test="filePidFuzzy != null and filePidFuzzy!=''">
+		<if test="query.filePidFuzzy != null and query.filePidFuzzy!=''">
 			and file_pid like concat('%', #{query.filePidFuzzy}, '%')
 		</if>
-		<if test="fileNameFuzzy != null and fileNameFuzzy!=''">
+		<if test="query.fileNameFuzzy != null and query.fileNameFuzzy!=''">
 			and file_name like concat('%', #{query.fileNameFuzzy}, '%')
 		</if>
-		<if test="fileCoverFuzzy != null and fileCoverFuzzy!=''">
+		<if test="query.fileCoverFuzzy != null and query.fileCoverFuzzy!=''">
 			and file_cover like concat('%', #{query.fileCoverFuzzy}, '%')
 		</if>
-		<if test="filePathFuzzy != null and filePathFuzzy!=''">
+		<if test="query.filePathFuzzy != null and query.filePathFuzzy!=''">
 			and file_path like concat('%', #{query.filePathFuzzy}, '%')
 		</if>
-		<if test="createTimeStart != null and createTimeStart!=''">
-			<![CDATA[ and create_time > str_to_date(#{createTimeStart}, '%Y-%m-%d')]]>
+		<if test="query.createTimeStart != null and query.createTimeStart!=''">
+			<![CDATA[ and create_time > str_to_date(#{query.createTimeStart}, '%Y-%m-%d %H:%m:%s')]]>
 		</if>
-		<if test="createTimeEnd != null and createTimeEnd!=''">
-			<![CDATA[ and create_time < DATE_SUB( str_to_date(#{createTimeEnd}, '%Y-%m-%d'), interval 1 DAY)]]>
+		<if test="query.createTimeEnd != null and query.createTimeEnd!=''">
+			<![CDATA[ and create_time < DATE_SUB( str_to_date(#{query.createTimeEnd}, '%Y-%m-%d %H:%m:%s'), interval -1 DAY)]]>
 		</if>
-		<if test="lastUpdateTimeStart != null and lastUpdateTimeStart!=''">
-			<![CDATA[ and last_update_time > str_to_date(#{lastUpdateTimeStart}, '%Y-%m-%d')]]>
+		<if test="query.lastUpdateTimeStart != null and query.lastUpdateTimeStart!=''">
+			<![CDATA[ and last_update_time > str_to_date(#{query.lastUpdateTimeStart}, '%Y-%m-%d %H:%m:%s')]]>
 		</if>
-		<if test="lastUpdateTimeEnd != null and lastUpdateTimeEnd!=''">
-			<![CDATA[ and last_update_time < DATE_SUB( str_to_date(#{lastUpdateTimeEnd}, '%Y-%m-%d'), interval 1 DAY)]]>
+		<if test="query.lastUpdateTimeEnd != null and query.lastUpdateTimeEnd!=''">
+			<![CDATA[ and last_update_time < DATE_SUB( str_to_date(#{query.lastUpdateTimeEnd}, '%Y-%m-%d %H:%m:%s'), interval -1 DAY)]]>
 		</if>
-		<if test="recoveryTimeStart != null and recoveryTimeStart!=''">
-			<![CDATA[ and recovery_time > str_to_date(#{recoveryTimeStart}, '%Y-%m-%d')]]>
+		<if test="query.recoveryTimeStart != null and query.recoveryTimeStart!=''">
+			<![CDATA[ and recovery_time > str_to_date(#{query.recoveryTimeStart}, '%Y-%m-%d %H:%m:%s')]]>
 		</if>
-		<if test="recoveryTimeEnd != null and recoveryTimeEnd!=''">
-			<![CDATA[ and recovery_time < DATE_SUB( str_to_date(#{recoveryTimeEnd}, '%Y-%m-%d'), interval 1 DAY)]]>
-		</if>
-		<if test="fileSuffixFuzzy != null and fileSuffixFuzzy!=''">
-			and file_suffix like concat('%', #{query.fileSuffixFuzzy}, '%')
+		<if test="query.recoveryTimeEnd != null and query.recoveryTimeEnd!=''">
+			<![CDATA[ and recovery_time < DATE_SUB( str_to_date(#{query.recoveryTimeEnd}, '%Y-%m-%d %H:%m:%s'), interval -1 DAY)]]>
 		</if>
 	</sql>
 	<sql id="base_condition">
 		<where>
-			<include refid='base_condition_list'/>
+			<include refid="base_condition_list"/>
 		</where>
 	</sql>
 	<sql id="base_condition_extend">
 		<where>
-			<include refid='base_condition_list'/>
-			<include refid='query_condition_list'/>
+			<include refid="base_condition_list"/>
+			<include refid="query_condition_list"/>
 		</where>
 	</sql>
 
+	<select id="selectList" resultMap="base_result_map">
+		SELECT
+		<include refid="base_column_list"/>
+		FROM file_info
+		<include refid='base_condition_extend'/>
+		<if test="query.orderBy!=null and query.orderBy!=''">
+			ORDER BY ${query.orderBy}</if>
+		limit ${query.simplePage.start},${query.simplePage.end}
+	</select>
+	<select id="selectCount" resultType="java.lang.Integer" >
+		SELECT
+		COUNT(1)
+		FROM file_info
+		<include refid="base_condition_extend"/>
+	</select>
+	<insert id="insert" parameterType="com.easyjava.entity.po.FileInfo">
+		INSERT INTO file_info
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="bean.fileId!=null">file_id,</if>
+			<if test="bean.userId!=null">user_id,</if>
+			<if test="bean.fileMd5!=null">file_md5,</if>
+			<if test="bean.filePid!=null">file_pid,</if>
+			<if test="bean.fileSize!=null">file_size,</if>
+			<if test="bean.fileName!=null">file_name,</if>
+			<if test="bean.fileCover!=null">file_cover,</if>
+			<if test="bean.filePath!=null">file_path,</if>
+			<if test="bean.createTime!=null">create_time,</if>
+			<if test="bean.lastUpdateTime!=null">last_update_time,</if>
+			<if test="bean.folderFlag!=null">folder_flag,</if>
+			<if test="bean.fileCategory!=null">file_category,</if>
+			<if test="bean.fileType!=null">file_type,</if>
+			<if test="bean.status!=null">status,</if>
+			<if test="bean.recoveryTime!=null">recovery_time,</if>
+			<if test="bean.delFlag!=null">del_flag,</if>
+		</trim>
+		VALUES
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="bean.fileId!=null">#{bean.fileId},</if>
+			<if test="bean.userId!=null">#{bean.userId},</if>
+			<if test="bean.fileMd5!=null">#{bean.fileMd5},</if>
+			<if test="bean.filePid!=null">#{bean.filePid},</if>
+			<if test="bean.fileSize!=null">#{bean.fileSize},</if>
+			<if test="bean.fileName!=null">#{bean.fileName},</if>
+			<if test="bean.fileCover!=null">#{bean.fileCover},</if>
+			<if test="bean.filePath!=null">#{bean.filePath},</if>
+			<if test="bean.createTime!=null">#{bean.createTime},</if>
+			<if test="bean.lastUpdateTime!=null">#{bean.lastUpdateTime},</if>
+			<if test="bean.folderFlag!=null">#{bean.folderFlag},</if>
+			<if test="bean.fileCategory!=null">#{bean.fileCategory},</if>
+			<if test="bean.fileType!=null">#{bean.fileType},</if>
+			<if test="bean.status!=null">#{bean.status},</if>
+			<if test="bean.recoveryTime!=null">#{bean.recoveryTime},</if>
+			<if test="bean.delFlag!=null">#{bean.delFlag},</if>
+		</trim>
+	</insert>
 </mapper>

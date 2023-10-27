@@ -1,59 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.easyjava.mapper.EmailCodeMapper">
-    <resultMap id="base_result_map" type="com.easyjava.entity.po.EmailCode">
-        <!--邮箱-->
-        <result column="email" property="email"/>
-        <!--验证码-->
-        <result column="code" property="code"/>
-        <!--验证码创建时间-->
-        <result column="create_time" property="createTime"/>
-        <!--状态0：未使用1:已使用-->
-        <result column="status" property="status"/>
-    </resultMap>
-    <sql id="base_column_list">
-        email
-        ,code,createTime,status
-    </sql>
-    <sql id="base_condition_list">
-        <if test="email != null and email!=''">
-            and email=#{query.email}
-        </if>
-        <if test="code != null and code!=''">
-            and code=#{query.code}
-        </if>
-        <if test="createTime != null">
-            and createTime=#{query.createTime}
-        </if>
-        <if test="status != null">
-            and status=#{query.status}
-        </if>
-    </sql>
-    <sql id="query_condition_list">
-        <if test="emailFuzzy != null and emailFuzzy!=''">
-            and email like concat('%', #{query.emailFuzzy}, '%')
-        </if>
-        <if test="codeFuzzy != null and codeFuzzy!=''">
-            and code like concat('%', #{query.codeFuzzy}, '%')
-        </if>
-        <if test="createTimeStart != null and createTimeStart!=''">
-            <![CDATA[ and create_time > str_to_date(#{createTimeStart}, '%Y-%m-%d')]]>
-        </if>
-        <if test="createTimeEnd != null and createTimeEnd!=''">
-            <![CDATA[ and create_time < DATE_SUB( str_to_date(#{createTimeEnd}, '%Y-%m-%d'), interval 1 DAY)]]>
-        </if>
-    </sql>
-    <sql id="base_condition">
-        <where>
-            <include refid='base_condition_list'/>
-        </where>
-    </sql>
-    <sql id="base_condition_extend">
-        <where>
-            <include refid='base_condition_list'/>
-            <include refid='query_condition_list'/>
-        </where>
-    </sql>
+	<resultMap id="base_result_map" type="com.easyjava.entity.po.EmailCode">
+		<!--邮箱-->
+		<result column="email" property="email"/>
+		<!--验证码-->
+		<result column="code" property="code"/>
+		<!--验证码创建时间-->
+		<result column="create_time" property="createTime"/>
+		<!--状态0：未使用1:已使用-->
+		<result column="status" property="status"/>
+		<!---->
+		<result column="id" property="id"/>
+	</resultMap>
+	<sql id="base_column_list">
+		email,code,create_time,status,id
+	</sql>
+	<sql id="base_condition_list">
+		<if test="query.email != null and email!=''">
+			and query.email=#{query.email}
+		</if>
+		<if test="query.code != null and code!=''">
+			and query.code=#{query.code}
+		</if>
+		<if test="query.createTime != null">
+			and create_time=#{query.createTime}
+		</if>
+		<if test="query.status != null">
+			and status=#{query.status}
+		</if>
+		<if test="query.id != null">
+			and id=#{query.id}
+		</if>
+	</sql>
+	<sql id="query_condition_list">
+		<if test="query.emailFuzzy != null and query.emailFuzzy!=''">
+			and email like concat('%', #{query.emailFuzzy}, '%')
+		</if>
+		<if test="query.codeFuzzy != null and query.codeFuzzy!=''">
+			and code like concat('%', #{query.codeFuzzy}, '%')
+		</if>
+		<if test="query.createTimeStart != null and query.createTimeStart!=''">
+			<![CDATA[ and create_time > str_to_date(#{query.createTimeStart}, '%Y-%m-%d %H:%m:%s')]]>
+		</if>
+		<if test="query.createTimeEnd != null and query.createTimeEnd!=''">
+			<![CDATA[ and create_time < DATE_SUB( str_to_date(#{query.createTimeEnd}, '%Y-%m-%d %H:%m:%s'), interval -1 DAY)]]>
+		</if>
+	</sql>
+	<sql id="base_condition">
+		<where>
+			<include refid="base_condition_list"/>
+		</where>
+	</sql>
+	<sql id="base_condition_extend">
+		<where>
+			<include refid="base_condition_list"/>
+			<include refid="query_condition_list"/>
+		</where>
+	</sql>
 
+	<select id="selectList" resultMap="base_result_map">
+		SELECT
+		<include refid="base_column_list"/>
+		FROM email_code
+		<include refid='base_condition_extend'/>
+		<if test="query.orderBy!=null and query.orderBy!=''">
+			ORDER BY ${query.orderBy}</if>
+		limit ${query.simplePage.start},${query.simplePage.end}
+	</select>
+	<select id="selectCount" resultType="java.lang.Integer" >
+		SELECT
+		COUNT(1)
+		FROM email_code
+		<include refid="base_condition_extend"/>
+	</select>
+	<insert id="insert" parameterType="com.easyjava.entity.po.EmailCode">
+		INSERT INTO email_code
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="bean.email!=null">email,</if>
+			<if test="bean.code!=null">code,</if>
+			<if test="bean.createTime!=null">create_time,</if>
+			<if test="bean.status!=null">status,</if>
+			<if test="bean.id!=null">id,</if>
+		</trim>
+		VALUES
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="bean.email!=null">#{bean.email},</if>
+			<if test="bean.code!=null">#{bean.code},</if>
+			<if test="bean.createTime!=null">#{bean.createTime},</if>
+			<if test="bean.status!=null">#{bean.status},</if>
+			<if test="bean.id!=null">#{bean.id},</if>
+		</trim>
+	</insert>
 </mapper>

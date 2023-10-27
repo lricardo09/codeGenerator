@@ -4,7 +4,96 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="536ec917-4765-4710-aa0a-514748687c4d" name="Changes" comment="" />
+    <list default="true" id="536ec917-4765-4710-aa0a-514748687c4d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/test/java/RunTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6ed190dc-77fb-4ee1-a878-cb433d024d04.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6ed190dc-77fb-4ee1-a878-cb433d024d04/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6ed190dc-77fb-4ee1-a878-cb433d024d04/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6ed190dc-77fb-4ee1-a878-cb433d024d04/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6ed190dc-77fb-4ee1-a878-cb433d024d04/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generaor/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/builder/BuildMapperXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/builder/BuildMapperXml.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/builder/BuildPo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/builder/BuildPo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generaor/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/bean/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/bean/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/bean/ConstantsCopyMirror.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/bean/ConstantsCopyMirror.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/bean/FieldInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/bean/FieldInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/bean/TableInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/bean/TableInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/builder/BuildBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/builder/BuildBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/builder/BuildComment.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/builder/BuildComment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/builder/BuildMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/builder/BuildMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/builder/BuildMapperXml.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/builder/BuildMapperXml.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/builder/BuildPo.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/builder/BuildPo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/builder/BuildQuery.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/builder/BuildQuery.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/builder/BuildTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/builder/BuildTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/utils/ConfigFileReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/utils/ConfigFileReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/utils/ConstantsClassGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/utils/ConstantsClassGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/utils/DateUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/utils/DateUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/utils/PropertyUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/utils/PropertyUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/utils/StringUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/utils/StringUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/po/EmailCode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/po/FileInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/po/FileShare.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/po/TestTb.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/po/UserInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/query/BaseQuery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/query/EmailCodeQuery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/query/FileInfoQuery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/query/FileShareQuery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/query/SimplePage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/query/TestTbQuery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/query/UserInfoQuery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/enums/DateTimePatternEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/enums/PageSize.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/mapper/BaseMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/mapper/EmailCodeMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/mapper/FileInfoMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/mapper/FileShareMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/mapper/TestTbMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/mapper/UserInfoMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/test/myService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/utils/DateUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/com/easyjava/mapper/EmailCodeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/com/easyjava/mapper/EmailCodeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/com/easyjava/mapper/FileInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/com/easyjava/mapper/FileInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/com/easyjava/mapper/UserInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/com/easyjava/mapper/UserInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/po/EmailCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/po/EmailCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/po/FileInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/po/FileInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/po/FileShare.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/po/TestTb.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/po/UserInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/po/UserInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/query/FileInfoQuery.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/query/FileInfoQuery.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/query/FileShareQuery.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/query/SimplePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/query/SimplePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/query/TestTbQuery.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/query/UserInfoQuery.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/query/UserInfoQuery.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/enums/DateTimePatternEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/enums/DateTimePatternEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/enums/PageSize.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/enums/PageSize.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/BaseMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/BaseMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/EmailCodeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/EmailCodeMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/EmailCodeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/EmailCodeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/FileInfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/FileInfoMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/FileInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/FileInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/FileShareMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/FileShareMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/FileShareMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/TestTbMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/TestTbMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/TestTbMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/UserInfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/UserInfoMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/UserInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/UserInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/utils/DateUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/utils/DateUtils.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,25 +110,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HierarchyBrowserManager">
     <option name="SORT_ALPHABETICALLY" value="true" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="jar://C:/jdk1.8.0_31/src.zip!/java/io/BufferedWriter.java" root0="SKIP_INSPECTION" />
-    <setting file="jar://C:/jdk1.8.0_31/src.zip!/java/io/FileOutputStream.java" root0="SKIP_INSPECTION" />
-    <setting file="jar://C:/jdk1.8.0_31/src.zip!/java/io/OutputStreamWriter.java" root0="SKIP_INSPECTION" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="localRepository" value="D:\maven-cangku" />
-        <option name="mavenHome" value="$PROJECT_DIR$/../../浏览器下载/apache-maven-3.9.4" />
-        <option name="userSettingsFile" value="D:\浏览器下载\apache-maven-3.9.4\conf\settings.xml" />
-      </MavenGeneralSettings>
-    </option>
   </component>
   <component name="ProjectId" id="2WC4cfjdwRfr5OmC8LJJjDRMoSO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -49,31 +132,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/PROJECT/workspace-mybatisCodeGeneraor/Generaor/src/main/resources&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;fe01ce2a7fbac8fafaed7c982a04e229&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
-    ]
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
@@ -89,7 +159,7 @@
       <recent name="com.easyjava.builder" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Application">
+  <component name="RunManager" selected="JUnit.RunTest.run2">
     <configuration name="A" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.easyjava.mapper.A" />
       <module name="demo" />
@@ -116,32 +186,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Constants" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.easyjava.bean.Constants" />
-      <module name="Generaor" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.easyjava.bean.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConstantsClassGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.easyjava.utils.ConstantsClassGenerator" />
-      <module name="Generaor" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.easyjava.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="EmailCodeQuery" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.easyjava.entity.query.EmailCodeQuery" />
       <module name="demo" />
@@ -155,13 +199,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RunTest.run" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RunTest" />
+      <option name="METHOD_NAME" value="run" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunTest.run2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RunTest" />
+      <option name="METHOD_NAME" value="run2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RunTest.run2" />
         <item itemvalue="Application.Application" />
+        <item itemvalue="JUnit.RunTest.run" />
         <item itemvalue="Application.EmailCodeQuery" />
         <item itemvalue="Application.A" />
-        <item itemvalue="Application.Constants" />
-        <item itemvalue="Application.ConstantsClassGenerator" />
       </list>
     </recent_temporary>
   </component>
@@ -188,6 +252,16 @@
       <workItem from="1697768473462" duration="25254000" />
       <workItem from="1698028530978" duration="15973000" />
       <workItem from="1698244193078" duration="745000" />
+      <workItem from="1698303183331" duration="554000" />
+      <workItem from="1698303918607" duration="1815000" />
+      <workItem from="1698305818435" duration="8000" />
+      <workItem from="1698305843102" duration="33000" />
+      <workItem from="1698305979139" duration="219000" />
+      <workItem from="1698314377334" duration="47000" />
+      <workItem from="1698317503605" duration="7672000" />
+      <workItem from="1698335086990" duration="406000" />
+      <workItem from="1698372688687" duration="10992000" />
+      <workItem from="1698397784808" duration="2332000" />
     </task>
     <servers />
   </component>
@@ -204,17 +278,9 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/builder/BuildBase.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="ls[1]" />
