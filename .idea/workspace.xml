@@ -4,96 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="536ec917-4765-4710-aa0a-514748687c4d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/test/java/RunTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6ed190dc-77fb-4ee1-a878-cb433d024d04.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6ed190dc-77fb-4ee1-a878-cb433d024d04/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6ed190dc-77fb-4ee1-a878-cb433d024d04/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6ed190dc-77fb-4ee1-a878-cb433d024d04/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6ed190dc-77fb-4ee1-a878-cb433d024d04/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generaor/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/builder/BuildMapperXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/builder/BuildMapperXml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/builder/BuildPo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/builder/BuildPo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generaor/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/bean/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/bean/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/bean/ConstantsCopyMirror.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/bean/ConstantsCopyMirror.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/bean/FieldInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/bean/FieldInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/bean/TableInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/bean/TableInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/builder/BuildBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/builder/BuildBase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/builder/BuildComment.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/builder/BuildComment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/builder/BuildMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/builder/BuildMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/builder/BuildMapperXml.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/builder/BuildMapperXml.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/builder/BuildPo.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/builder/BuildPo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/builder/BuildQuery.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/builder/BuildQuery.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/builder/BuildTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/builder/BuildTable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/utils/ConfigFileReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/utils/ConfigFileReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/utils/ConstantsClassGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/utils/ConstantsClassGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/utils/DateUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/utils/DateUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/utils/PropertyUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/utils/PropertyUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/utils/StringUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/utils/StringUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/po/EmailCode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/po/FileInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/po/FileShare.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/po/TestTb.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/po/UserInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/query/BaseQuery.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/query/EmailCodeQuery.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/query/FileInfoQuery.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/query/FileShareQuery.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/query/SimplePage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/query/TestTbQuery.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/query/UserInfoQuery.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/enums/DateTimePatternEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/enums/PageSize.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/mapper/BaseMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/mapper/EmailCodeMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/mapper/FileInfoMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/mapper/FileShareMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/mapper/TestTbMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/mapper/UserInfoMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/test/myService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/utils/DateUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/com/easyjava/mapper/EmailCodeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/com/easyjava/mapper/EmailCodeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/com/easyjava/mapper/FileInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/com/easyjava/mapper/FileInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/com/easyjava/mapper/UserInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/com/easyjava/mapper/UserInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/po/EmailCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/po/EmailCode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/po/FileInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/po/FileInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/po/FileShare.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/po/TestTb.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/po/UserInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/po/UserInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/query/FileInfoQuery.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/query/FileInfoQuery.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/query/FileShareQuery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/query/SimplePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/query/SimplePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/query/TestTbQuery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/query/UserInfoQuery.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/entity/query/UserInfoQuery.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/enums/DateTimePatternEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/enums/DateTimePatternEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/enums/PageSize.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/enums/PageSize.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/BaseMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/BaseMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/EmailCodeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/EmailCodeMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/EmailCodeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/EmailCodeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/FileInfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/FileInfoMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/FileInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/FileInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/FileShareMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/FileShareMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/FileShareMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/TestTbMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/TestTbMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/TestTbMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/UserInfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/UserInfoMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/UserInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/UserInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/utils/DateUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/utils/DateUtils.class" afterDir="false" />
-    </list>
+    <list default="true" id="536ec917-4765-4710-aa0a-514748687c4d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -261,8 +172,16 @@
       <workItem from="1698317503605" duration="7672000" />
       <workItem from="1698335086990" duration="406000" />
       <workItem from="1698372688687" duration="10992000" />
-      <workItem from="1698397784808" duration="2332000" />
+      <workItem from="1698397784808" duration="2850000" />
     </task>
+    <task id="LOCAL-00001" summary="tesss">
+      <created>1698400488194</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698400488194</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,6 +198,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="tesss" />
+    <option name="LAST_COMMIT_MESSAGE" value="tesss" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
