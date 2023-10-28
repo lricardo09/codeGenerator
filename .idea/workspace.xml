@@ -5,33 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="536ec917-4765-4710-aa0a-514748687c4d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/demo/src/main/resources/com/easyjava/mapper/MyTableMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/builder/BuildComment.java" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/builder/BuildComment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/builder/BuildMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/builder/BuildMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/builder/BuildMapperXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/src/main/java/com/easyjava/builder/BuildMapperXml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/builder/BuildMapperXml.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generaor/target/classes/com/easyjava/builder/BuildMapperXml.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/po/EmailCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/po/EmailCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/po/FileInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/po/FileInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/po/MyTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/po/MyTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/po/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/po/UserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/query/EmailCodeQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/query/EmailCodeQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/query/FileInfoQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/query/FileInfoQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/query/MyTableQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/query/MyTableQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/query/UserInfoQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/entity/query/UserInfoQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/mapper/EmailCodeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/mapper/EmailCodeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/mapper/FileInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/mapper/FileInfoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/mapper/MyTableMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/mapper/MyTableMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/mapper/UserInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/easyjava/mapper/UserInfoMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/resources/com/easyjava/mapper/EmailCodeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/com/easyjava/mapper/EmailCodeMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/resources/com/easyjava/mapper/FileInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/com/easyjava/mapper/FileInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/com/easyjava/mapper/FileShareMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/com/easyjava/mapper/TestTbMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/com/easyjava/mapper/MyTableMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/com/easyjava/mapper/MyTableMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/resources/com/easyjava/mapper/UserInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/com/easyjava/mapper/UserInfoMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/test/java/RunTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/test/java/RunTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/EmailCodeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/EmailCodeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/FileInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/FileInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/FileShareMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/TestTbMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/UserInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/easyjava/mapper/UserInfoMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +81,7 @@
       <recent name="com.easyjava.builder" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RunTest.insertBatch">
+  <component name="RunManager" selected="JUnit.RunTest.ee">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.easyjava.Application" />
       <module name="Generaor" />
@@ -113,15 +95,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EmailCodeQuery" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.easyjava.entity.query.EmailCodeQuery" />
+    <configuration name="RunTest.ee" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.easyjava.entity.query.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RunTest" />
+      <option name="METHOD_NAME" value="ee" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -136,21 +115,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RunTest.run" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RunTest.insertorupdateBatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="RunTest" />
-      <option name="METHOD_NAME" value="run" />
+      <option name="METHOD_NAME" value="insertorupdateBatch" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RunTest.run2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RunTest.selectByzhujian" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="RunTest" />
-      <option name="METHOD_NAME" value="run2" />
+      <option name="METHOD_NAME" value="selectByzhujian" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -158,11 +137,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RunTest.insertBatch" />
+        <item itemvalue="JUnit.RunTest.ee" />
+        <item itemvalue="JUnit.RunTest.selectByzhujian" />
         <item itemvalue="Application.Application" />
-        <item itemvalue="JUnit.RunTest.run2" />
-        <item itemvalue="JUnit.RunTest.run" />
-        <item itemvalue="Application.EmailCodeQuery" />
+        <item itemvalue="JUnit.RunTest.insertorupdateBatch" />
+        <item itemvalue="JUnit.RunTest.insertBatch" />
       </list>
     </recent_temporary>
   </component>
@@ -200,7 +179,8 @@
       <workItem from="1698372688687" duration="10992000" />
       <workItem from="1698397784808" duration="5677000" />
       <workItem from="1698407348755" duration="676000" />
-      <workItem from="1698461556286" duration="4914000" />
+      <workItem from="1698461556286" duration="5032000" />
+      <workItem from="1698480390706" duration="7058000" />
     </task>
     <task id="LOCAL-00001" summary="tesss">
       <created>1698400488194</created>
@@ -216,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698401130919</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="周6">
+      <created>1698467323793</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1698467323793</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,7 +224,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="tesss" />
-    <option name="LAST_COMMIT_MESSAGE" value="tesss" />
+    <MESSAGE value="周6" />
+    <option name="LAST_COMMIT_MESSAGE" value="周6" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

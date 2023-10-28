@@ -214,7 +214,9 @@ public class BuildMapperXml {
                 if (uniqueMap.containsKey(field.getFieldName())){
                     continue;
                 }
-                bw.write("\t\t\t"+field.getFieldName()+"=values("+field.getFieldName()+"),\n");
+                bw.write("\t\t\t<if test=\"bean."+field.getPropertyName()+"!=null\">\n"
+                        +"\t\t\t"+field.getFieldName()+"=values("+field.getFieldName()+"),\n" +
+                        "\t\t\t</if>\n");
             }
             bw.write("\t\t</trim>\n");
             bw.write("\t</insert>\n");
@@ -237,8 +239,59 @@ public class BuildMapperXml {
             String insertPropertyStr = insertPropertyStrbf.substring(0, insertPropertyStrbf.length() - 2);
             bw.write(insertPropertyStr+")\n");
             bw.write("\t\t</foreach>\n");
-            bw.write("\t\t;\n");
             bw.write("\t</insert>\n");
+            //insertOrUpdateBatch
+            bw.write("\t<insert id=\"insertOrUpdateBatch\" parameterType=\""+Constants.PACKAGE_PO+"."+ table.getBeanName()+"\">\n");
+            bw.write("\t\tINSERT INTO "+table.getTableName()+"\n");
+            bw.write("\t\t(<include refid=\"base_column_list\"/>)\n");
+            bw.write("\t\tVALUES\n");
+            bw.write("\t\t<foreach collection=\"list\" item=\"item\" separator=\",\">\n");
+            bw.write(insertPropertyStr+")\n");
+            bw.write("\t\t</foreach>\n");
+            bw.write("\t\tON DUPLICATE KEY UPDATE\n");
+            bw.write("\t\t<trim suffixOverrides=\",\">\n");
+            for(FieldInfo field: table.getFieldList()){
+                if (uniqueMap.containsKey(field.getFieldName())){
+                    continue;
+                }
+                bw.write("\t\t\t"+field.getFieldName()+"=values("+field.getFieldName()+"),\n");
+            }
+            bw.write("\t\t</trim>\n");
+            bw.write("\t</insert>\n");
+            //根据主键查询
+            Map<String, List<FieldInfo>> keyIndexMap = table.getKeyIndexMap();
+            StringBuffer fieldName = new StringBuffer();
+            StringBuffer paramName = new StringBuffer();
+            StringBuffer comment = new StringBuffer();
+            int index=0;
+            for (Map.Entry<String, List<FieldInfo>> entry : keyIndexMap.entrySet()){
+                for (FieldInfo fieldInfo : entry.getValue()){
+                    fieldName.append(StringUtils.firstLetter2Uppercase(fieldInfo.getFieldName()));
+                    paramName.append(fieldInfo.getFieldName()+"=#{"+fieldInfo.getPropertyName()+"}");
+                    comment.append(fieldInfo.getPropertyName());
+                    index++;
+                    if (index<entry.getValue().size()){
+                        fieldName.append("And");
+                        paramName.append(" and ");
+                        comment.append("和");
+                    }
+                }
+
+                BuildComment.createXmlComment(bw,"根据"+comment+"查询");
+                bw.write("\t<select id=\"selectBy"+fieldName+"\" resultMap=\"base_result_map\">\n");
+                bw.write("\t\tselect <include refid=\"base_column_list\"/> from "+table.getTableName()+" where "+paramName+"\n");
+                bw.write("\t</select>\n");
+                //                BuildComment.createXmlComment(bw,"根据"+comment+"更新");
+                //bw.write("\t\tInteger updateBy"+fieldName+"(@Param(\"bean\") T t, "+paramName+");\n\n");
+                BuildComment.createXmlComment(bw,"根据"+comment+"删除");
+                bw.write("\t<delete id=\"deleteBy"+fieldName+"\">\n");
+                bw.write("\t\tdelete from "+table.getTableName()+" where "+paramName+"\n");
+                bw.write("\t</delete>\n");
+                fieldName.setLength(0);
+                paramName.setLength(0);
+                comment.setLength(0);
+                index=0;
+            }
             bw.write("</mapper>");
             bw.flush();
 

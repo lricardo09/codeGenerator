@@ -109,8 +109,12 @@
 		</trim>
 		ON DUPLICATE KEY UPDATE
 		<trim suffixOverrides=",">
+			<if test="bean.name!=null">
 			name=values(name),
+			</if>
+			<if test="bean.aB!=null">
 			a_b=values(a_b),
+			</if>
 		</trim>
 	</insert>
 	<insert id="insertBatch" parameterType="com.easyjava.entity.po.MyTable">
@@ -124,6 +128,46 @@
 			#{item.aB},
 			#{item.yy})
 		</foreach>
-		;
 	</insert>
+	<insert id="insertOrUpdateBatch" parameterType="com.easyjava.entity.po.MyTable">
+		INSERT INTO my_table
+		(<include refid="base_column_list"/>)
+		VALUES
+		<foreach collection="list" item="item" separator=",">
+			(#{item.myId},
+			#{item.name},
+			#{item.iOrU},
+			#{item.aB},
+			#{item.yy})
+		</foreach>
+		ON DUPLICATE KEY UPDATE
+		<trim suffixOverrides=",">
+			name=values(name),
+			a_b=values(a_b),
+		</trim>
+	</insert>
+ 	<!-- 根据myId查询-->
+	<select id="selectByMy_id" resultMap="base_result_map">
+		select <include refid="base_column_list"/> from my_table where my_id=#{myId}
+	</select>
+ 	<!-- 根据myId删除-->
+	<delete id="deleteByMy_id">
+		delete from my_table where my_id=#{myId}
+	</delete>
+ 	<!-- 根据iOrU查询-->
+	<select id="selectByI_or_u" resultMap="base_result_map">
+		select <include refid="base_column_list"/> from my_table where i_or_u=#{iOrU}
+	</select>
+ 	<!-- 根据iOrU删除-->
+	<delete id="deleteByI_or_u">
+		delete from my_table where i_or_u=#{iOrU}
+	</delete>
+ 	<!-- 根据yy查询-->
+	<select id="selectByYy" resultMap="base_result_map">
+		select <include refid="base_column_list"/> from my_table where yy=#{yy}
+	</select>
+ 	<!-- 根据yy删除-->
+	<delete id="deleteByYy">
+		delete from my_table where yy=#{yy}
+	</delete>
 </mapper>

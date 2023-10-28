@@ -23,4 +23,7 @@ public class BuildComment {
     public static void createMethodComment(BufferedWriter bw,String comment){
 
     }
+    public static void createXmlComment(BufferedWriter bw,String comment)throws IOException{
+        bw.write(" \t<!-- "+comment+"-->\n");
+    }
 }

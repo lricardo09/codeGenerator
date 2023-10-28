@@ -61,7 +61,6 @@ public class BuildMapper {
                 paramName.setLength(0);
                 comment.setLength(0);
                 index=0;
-
             }
             bw.newLine();
             bw.write("}");

@@ -184,13 +184,27 @@
 		</trim>
 		ON DUPLICATE KEY UPDATE
 		<trim suffixOverrides=",">
+			<if test="bean.qqAvatar!=null">
 			qq_avatar=values(qq_avatar),
+			</if>
+			<if test="bean.password!=null">
 			password=values(password),
+			</if>
+			<if test="bean.joinTime!=null">
 			join_time=values(join_time),
+			</if>
+			<if test="bean.lastLoginTime!=null">
 			last_login_time=values(last_login_time),
+			</if>
+			<if test="bean.status!=null">
 			status=values(status),
+			</if>
+			<if test="bean.usedSpace!=null">
 			used_space=values(used_space),
+			</if>
+			<if test="bean.totalSpace!=null">
 			total_space=values(total_space),
+			</if>
 		</trim>
 	</insert>
 	<insert id="insertBatch" parameterType="com.easyjava.entity.po.UserInfo">
@@ -210,6 +224,65 @@
 			#{item.usedSpace},
 			#{item.totalSpace})
 		</foreach>
-		;
 	</insert>
+	<insert id="insertOrUpdateBatch" parameterType="com.easyjava.entity.po.UserInfo">
+		INSERT INTO user_info
+		(<include refid="base_column_list"/>)
+		VALUES
+		<foreach collection="list" item="item" separator=",">
+			(#{item.userId},
+			#{item.nickName},
+			#{item.email},
+			#{item.qqOpenId},
+			#{item.qqAvatar},
+			#{item.password},
+			#{item.joinTime},
+			#{item.lastLoginTime},
+			#{item.status},
+			#{item.usedSpace},
+			#{item.totalSpace})
+		</foreach>
+		ON DUPLICATE KEY UPDATE
+		<trim suffixOverrides=",">
+			qq_avatar=values(qq_avatar),
+			password=values(password),
+			join_time=values(join_time),
+			last_login_time=values(last_login_time),
+			status=values(status),
+			used_space=values(used_space),
+			total_space=values(total_space),
+		</trim>
+	</insert>
+ 	<!-- 根据userId查询-->
+	<select id="selectByUser_id" resultMap="base_result_map">
+		select <include refid="base_column_list"/> from user_info where user_id=#{userId}
+	</select>
+ 	<!-- 根据userId删除-->
+	<delete id="deleteByUser_id">
+		delete from user_info where user_id=#{userId}
+	</delete>
+ 	<!-- 根据email查询-->
+	<select id="selectByEmail" resultMap="base_result_map">
+		select <include refid="base_column_list"/> from user_info where email=#{email}
+	</select>
+ 	<!-- 根据email删除-->
+	<delete id="deleteByEmail">
+		delete from user_info where email=#{email}
+	</delete>
+ 	<!-- 根据qqOpenId查询-->
+	<select id="selectByQq_open_id" resultMap="base_result_map">
+		select <include refid="base_column_list"/> from user_info where qq_open_id=#{qqOpenId}
+	</select>
+ 	<!-- 根据qqOpenId删除-->
+	<delete id="deleteByQq_open_id">
+		delete from user_info where qq_open_id=#{qqOpenId}
+	</delete>
+ 	<!-- 根据nickName查询-->
+	<select id="selectByNick_name" resultMap="base_result_map">
+		select <include refid="base_column_list"/> from user_info where nick_name=#{nickName}
+	</select>
+ 	<!-- 根据nickName删除-->
+	<delete id="deleteByNick_name">
+		delete from user_info where nick_name=#{nickName}
+	</delete>
 </mapper>

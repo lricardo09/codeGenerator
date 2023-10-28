@@ -112,11 +112,21 @@
 		</trim>
 		ON DUPLICATE KEY UPDATE
 		<trim suffixOverrides=",">
+			<if test="bean.email!=null">
 			email=values(email),
+			</if>
+			<if test="bean.code!=null">
 			code=values(code),
+			</if>
+			<if test="bean.createTime!=null">
 			create_time=values(create_time),
+			</if>
+			<if test="bean.status!=null">
 			status=values(status),
+			</if>
+			<if test="bean.id!=null">
 			id=values(id),
+			</if>
 		</trim>
 	</insert>
 	<insert id="insertBatch" parameterType="com.easyjava.entity.po.EmailCode">
@@ -130,6 +140,25 @@
 			#{item.status},
 			#{item.id})
 		</foreach>
-		;
+	</insert>
+	<insert id="insertOrUpdateBatch" parameterType="com.easyjava.entity.po.EmailCode">
+		INSERT INTO email_code
+		(<include refid="base_column_list"/>)
+		VALUES
+		<foreach collection="list" item="item" separator=",">
+			(#{item.email},
+			#{item.code},
+			#{item.createTime},
+			#{item.status},
+			#{item.id})
+		</foreach>
+		ON DUPLICATE KEY UPDATE
+		<trim suffixOverrides=",">
+			email=values(email),
+			code=values(code),
+			create_time=values(create_time),
+			status=values(status),
+			id=values(id),
+		</trim>
 	</insert>
 </mapper>
