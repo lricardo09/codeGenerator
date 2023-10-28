@@ -5,7 +5,7 @@ import org.apache.ibatis.annotations.Param;
 /**
  * @description: 文件信息表
  * @author: ricardo.m.lu
- * @date: 23-10-27
+ * @date: 23-10-28
  */
 public interface FileInfoMapper<T, P> extends BaseMapper{
 	/**

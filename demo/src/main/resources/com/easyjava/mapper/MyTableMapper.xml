@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ 		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.easyjava.mapper.MyTableMapper">
+	<resultMap id="base_result_map" type="com.easyjava.entity.po.MyTable">
+		<!---->
+		<id column="my_id" property="myId"/>
+		<!---->
+		<result column="name" property="name"/>
+		<!---->
+		<result column="i_or_u" property="iOrU"/>
+		<!---->
+		<result column="a_b" property="aB"/>
+		<!---->
+		<result column="yy" property="yy"/>
+	</resultMap>
+	<sql id="base_column_list">
+		my_id,name,i_or_u,a_b,yy
+	</sql>
+	<sql id="base_condition_list">
+		<if test="query.myId != null">
+			and my_id=#{query.myId}
+		</if>
+		<if test="query.name != null">
+			and name=#{query.name}
+		</if>
+		<if test="query.iOrU != null and iOrU!=''">
+			and query.i_or_u=#{query.iOrU}
+		</if>
+		<if test="query.aB != null">
+			and a_b=#{query.aB}
+		</if>
+		<if test="query.yy != null and yy!=''">
+			and query.yy=#{query.yy}
+		</if>
+	</sql>
+	<sql id="query_condition_list">
+		<if test="query.iOrUFuzzy != null and query.iOrUFuzzy!=''">
+			and i_or_u like concat('%', #{query.iOrUFuzzy}, '%')
+		</if>
+		<if test="query.yyFuzzy != null and query.yyFuzzy!=''">
+			and yy like concat('%', #{query.yyFuzzy}, '%')
+		</if>
+	</sql>
+	<sql id="base_condition">
+		<where>
+			<include refid="base_condition_list"/>
+		</where>
+	</sql>
+	<sql id="base_condition_extend">
+		<where>
+			<include refid="base_condition_list"/>
+			<include refid="query_condition_list"/>
+		</where>
+	</sql>
+
+	<select id="selectList" resultMap="base_result_map">
+		SELECT
+		<include refid="base_column_list"/>
+		FROM my_table
+		<include refid='base_condition_extend'/>
+		<if test="query.orderBy!=null and query.orderBy!=''">
+			ORDER BY ${query.orderBy}</if>
+		limit ${query.simplePage.start},${query.simplePage.end}
+	</select>
+	<select id="selectCount" resultType="java.lang.Integer" >
+		SELECT
+		COUNT(1)
+		FROM my_table
+		<include refid="base_condition_extend"/>
+	</select>
+	<insert id="insert" parameterType="com.easyjava.entity.po.MyTable">
+		INSERT INTO my_table
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="bean.myId!=null">my_id,</if>
+			<if test="bean.name!=null">name,</if>
+			<if test="bean.iOrU!=null">i_or_u,</if>
+			<if test="bean.aB!=null">a_b,</if>
+			<if test="bean.yy!=null">yy,</if>
+		</trim>
+		VALUES
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="bean.myId!=null">#{bean.myId},</if>
+			<if test="bean.name!=null">#{bean.name},</if>
+			<if test="bean.iOrU!=null">#{bean.iOrU},</if>
+			<if test="bean.aB!=null">#{bean.aB},</if>
+			<if test="bean.yy!=null">#{bean.yy},</if>
+		</trim>
+		<selectKey keyProperty="bean.myId" order="AFTER" resultType="java.lang.Integer">
+		SELECT LAST_INSERT_ID()
+		</selectKey>
+	</insert>
+	<insert id="insertOrUpdate" parameterType="com.easyjava.entity.po.MyTable">
+		INSERT INTO my_table
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="bean.myId!=null">my_id,</if>
+			<if test="bean.name!=null">name,</if>
+			<if test="bean.iOrU!=null">i_or_u,</if>
+			<if test="bean.aB!=null">a_b,</if>
+			<if test="bean.yy!=null">yy,</if>
+		</trim>
+		VALUES
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="bean.myId!=null">#{bean.myId},</if>
+			<if test="bean.name!=null">#{bean.name},</if>
+			<if test="bean.iOrU!=null">#{bean.iOrU},</if>
+			<if test="bean.aB!=null">#{bean.aB},</if>
+			<if test="bean.yy!=null">#{bean.yy},</if>
+		</trim>
+		ON DUPLICATE KEY UPDATE
+		<trim suffixOverrides=",">
+			name=values(name),
+			a_b=values(a_b),
+		</trim>
+	</insert>
+	<insert id="insertBatch" parameterType="com.easyjava.entity.po.MyTable">
+		INSERT INTO my_table
+		(<include refid="base_column_list"/>)
+		VALUES
+		<foreach collection="list" item="item" separator=",">
+			(#{item.myId},
+			#{item.name},
+			#{item.iOrU},
+			#{item.aB},
+			#{item.yy})
+		</foreach>
+		;
+	</insert>
+</mapper>

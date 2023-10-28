@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.*;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -182,6 +183,61 @@ public class BuildMapperXml {
                 bw.write("\t\t<selectKey keyProperty=\"bean."+autoIncrementField.getPropertyName()+"\" order=\"AFTER\" resultType=\"java.lang.Integer\">\n" +
                         "\t\tSELECT LAST_INSERT_ID()\n\t\t</selectKey>\n" );
             }
+            bw.write("\t</insert>\n");
+            //insert or update
+            bw.write("\t<insert id=\"insertOrUpdate\" parameterType=\""+Constants.PACKAGE_PO+"."+ table.getBeanName()+"\">\n");
+            bw.write("\t\tINSERT INTO "+table.getTableName()+"\n");
+            bw.write("\t\t<trim prefix=\"(\" suffix=\")\" suffixOverrides=\",\">\n");
+            for(FieldInfo field: table.getFieldList()){
+                bw.write("\t\t\t<if test=\"bean."+field.getPropertyName()+"!=null\">" +
+                        field.getFieldName()+",</if>\n");
+            }
+            bw.write("\t\t</trim>\n");
+            bw.write("\t\tVALUES\n");
+            bw.write("\t\t<trim prefix=\"(\" suffix=\")\" suffixOverrides=\",\">\n");
+            StringBuffer str2=new StringBuffer();
+            for(FieldInfo field: table.getFieldList()){
+                str2.append("\t\t\t<if test=\"bean."+field.getPropertyName()+"!=null\">" +
+                        "#{bean."+field.getPropertyName()+"},</if>\n");
+            }
+            bw.write(str.toString());
+            bw.write("\t\t</trim>\n");
+            bw.write("\t\tON DUPLICATE KEY UPDATE\n");
+            bw.write("\t\t<trim suffixOverrides=\",\">\n");
+            Map uniqueMap=new HashMap();
+            for(Map.Entry fieldList: table.getKeyIndexMap().entrySet()){
+                for (FieldInfo field: (List<FieldInfo>)fieldList.getValue()){
+                    uniqueMap.put(field.getFieldName(),field.getFieldName());
+                }
+            }
+            for(FieldInfo field: table.getFieldList()){
+                if (uniqueMap.containsKey(field.getFieldName())){
+                    continue;
+                }
+                bw.write("\t\t\t"+field.getFieldName()+"=values("+field.getFieldName()+"),\n");
+            }
+            bw.write("\t\t</trim>\n");
+            bw.write("\t</insert>\n");
+            //insertBatch
+            bw.write("\t<insert id=\"insertBatch\" parameterType=\""+Constants.PACKAGE_PO+"."+ table.getBeanName()+"\">\n");
+            bw.write("\t\tINSERT INTO "+table.getTableName()+"\n");
+            bw.write("\t\t(<include refid=\"base_column_list\"/>)\n");
+            bw.write("\t\tVALUES\n");
+            bw.write("\t\t<foreach collection=\"list\" item=\"item\" separator=\",\">\n");
+            StringBuffer insertPropertyStrbf=new StringBuffer();
+            insertPropertyStrbf.append("\t\t\t(");
+            int idx=0;
+            for(FieldInfo field: table.getFieldList()){
+                if (idx==0)
+                    insertPropertyStrbf.append("#{item."+field.getPropertyName()+"},\n");
+                else
+                    insertPropertyStrbf.append("\t\t\t#{item."+field.getPropertyName()+"},\n");
+                ++idx;
+            }
+            String insertPropertyStr = insertPropertyStrbf.substring(0, insertPropertyStrbf.length() - 2);
+            bw.write(insertPropertyStr+")\n");
+            bw.write("\t\t</foreach>\n");
+            bw.write("\t\t;\n");
             bw.write("\t</insert>\n");
             bw.write("</mapper>");
             bw.flush();

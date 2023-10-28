@@ -197,4 +197,85 @@
 			<if test="bean.delFlag!=null">#{bean.delFlag},</if>
 		</trim>
 	</insert>
+	<insert id="insertOrUpdate" parameterType="com.easyjava.entity.po.FileInfo">
+		INSERT INTO file_info
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="bean.fileId!=null">file_id,</if>
+			<if test="bean.userId!=null">user_id,</if>
+			<if test="bean.fileMd5!=null">file_md5,</if>
+			<if test="bean.filePid!=null">file_pid,</if>
+			<if test="bean.fileSize!=null">file_size,</if>
+			<if test="bean.fileName!=null">file_name,</if>
+			<if test="bean.fileCover!=null">file_cover,</if>
+			<if test="bean.filePath!=null">file_path,</if>
+			<if test="bean.createTime!=null">create_time,</if>
+			<if test="bean.lastUpdateTime!=null">last_update_time,</if>
+			<if test="bean.folderFlag!=null">folder_flag,</if>
+			<if test="bean.fileCategory!=null">file_category,</if>
+			<if test="bean.fileType!=null">file_type,</if>
+			<if test="bean.status!=null">status,</if>
+			<if test="bean.recoveryTime!=null">recovery_time,</if>
+			<if test="bean.delFlag!=null">del_flag,</if>
+		</trim>
+		VALUES
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="bean.fileId!=null">#{bean.fileId},</if>
+			<if test="bean.userId!=null">#{bean.userId},</if>
+			<if test="bean.fileMd5!=null">#{bean.fileMd5},</if>
+			<if test="bean.filePid!=null">#{bean.filePid},</if>
+			<if test="bean.fileSize!=null">#{bean.fileSize},</if>
+			<if test="bean.fileName!=null">#{bean.fileName},</if>
+			<if test="bean.fileCover!=null">#{bean.fileCover},</if>
+			<if test="bean.filePath!=null">#{bean.filePath},</if>
+			<if test="bean.createTime!=null">#{bean.createTime},</if>
+			<if test="bean.lastUpdateTime!=null">#{bean.lastUpdateTime},</if>
+			<if test="bean.folderFlag!=null">#{bean.folderFlag},</if>
+			<if test="bean.fileCategory!=null">#{bean.fileCategory},</if>
+			<if test="bean.fileType!=null">#{bean.fileType},</if>
+			<if test="bean.status!=null">#{bean.status},</if>
+			<if test="bean.recoveryTime!=null">#{bean.recoveryTime},</if>
+			<if test="bean.delFlag!=null">#{bean.delFlag},</if>
+		</trim>
+		ON DUPLICATE KEY UPDATE
+		<trim suffixOverrides=",">
+			file_md5=values(file_md5),
+			file_pid=values(file_pid),
+			file_size=values(file_size),
+			file_name=values(file_name),
+			file_cover=values(file_cover),
+			file_path=values(file_path),
+			create_time=values(create_time),
+			last_update_time=values(last_update_time),
+			folder_flag=values(folder_flag),
+			file_category=values(file_category),
+			file_type=values(file_type),
+			status=values(status),
+			recovery_time=values(recovery_time),
+			del_flag=values(del_flag),
+		</trim>
+	</insert>
+	<insert id="insertBatch" parameterType="com.easyjava.entity.po.FileInfo">
+		INSERT INTO file_info
+		(<include refid="base_column_list"/>)
+		VALUES
+		<foreach collection="list" item="item" separator=",">
+			(#{item.fileId},
+			#{item.userId},
+			#{item.fileMd5},
+			#{item.filePid},
+			#{item.fileSize},
+			#{item.fileName},
+			#{item.fileCover},
+			#{item.filePath},
+			#{item.createTime},
+			#{item.lastUpdateTime},
+			#{item.folderFlag},
+			#{item.fileCategory},
+			#{item.fileType},
+			#{item.status},
+			#{item.recoveryTime},
+			#{item.delFlag})
+		</foreach>
+		;
+	</insert>
 </mapper>

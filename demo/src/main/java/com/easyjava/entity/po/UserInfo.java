@@ -8,7 +8,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 /**
  * @description: 用户信息
  * @author: ricardo.m.lu
- * @date: 23-10-27
+ * @date: 23-10-28
  */
 public class UserInfo implements Serializable {
 	/**

@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * @description: 文件信息表
  * @author: ricardo.m.lu
- * @date: 23-10-27
+ * @date: 23-10-28
  */
 public class FileInfoQuery extends BaseQuery {
 	/**

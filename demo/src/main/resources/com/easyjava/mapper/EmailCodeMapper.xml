@@ -93,4 +93,43 @@
 			<if test="bean.id!=null">#{bean.id},</if>
 		</trim>
 	</insert>
+	<insert id="insertOrUpdate" parameterType="com.easyjava.entity.po.EmailCode">
+		INSERT INTO email_code
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="bean.email!=null">email,</if>
+			<if test="bean.code!=null">code,</if>
+			<if test="bean.createTime!=null">create_time,</if>
+			<if test="bean.status!=null">status,</if>
+			<if test="bean.id!=null">id,</if>
+		</trim>
+		VALUES
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="bean.email!=null">#{bean.email},</if>
+			<if test="bean.code!=null">#{bean.code},</if>
+			<if test="bean.createTime!=null">#{bean.createTime},</if>
+			<if test="bean.status!=null">#{bean.status},</if>
+			<if test="bean.id!=null">#{bean.id},</if>
+		</trim>
+		ON DUPLICATE KEY UPDATE
+		<trim suffixOverrides=",">
+			email=values(email),
+			code=values(code),
+			create_time=values(create_time),
+			status=values(status),
+			id=values(id),
+		</trim>
+	</insert>
+	<insert id="insertBatch" parameterType="com.easyjava.entity.po.EmailCode">
+		INSERT INTO email_code
+		(<include refid="base_column_list"/>)
+		VALUES
+		<foreach collection="list" item="item" separator=",">
+			(#{item.email},
+			#{item.code},
+			#{item.createTime},
+			#{item.status},
+			#{item.id})
+		</foreach>
+		;
+	</insert>
 </mapper>

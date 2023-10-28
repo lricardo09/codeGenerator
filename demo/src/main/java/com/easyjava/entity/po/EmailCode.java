@@ -7,7 +7,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 /**
  * @description: 
  * @author: ricardo.m.lu
- * @date: 23-10-27
+ * @date: 23-10-28
  */
 public class EmailCode implements Serializable {
 	/**
